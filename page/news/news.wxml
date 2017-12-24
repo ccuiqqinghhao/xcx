@@ -1,0 +1,10 @@
+<view class="context">
+  <text>a\nb\nc\nd
+  </text>
+</view>
+<view class="context">
+  a
+</view>
+<view class="context">
+  asadasdasdasdsa
+</view>

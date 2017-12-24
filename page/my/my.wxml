@@ -1,0 +1,41 @@
+<block wx:if="{{!isLogin}}">
+  <view class='page'>
+    <view class='page__hd'>
+      <view class="page__title">您还没有登陆</view>
+      <view class="page__desc">您必须登陆后才可以继续使用。您可以在这里发布任何好消息，完成物品交易。</view>
+      <button class="weui-btn" type="primary" bindtap='startLogin'>登陆</button>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class='page'>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <image src="{{userInfo.avatarUrl}}" style="width: 50px; height: 50px; display: block" />
+          <!--<view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>-->
+        </view>
+        <view class="weui-cell__bd">
+          <view>{{userInfo.nickName}}</view>
+          <!--
+          <view style="font-size: 13px;color: #888888;">{{userInfo.province}}</view>
+          -->
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">带说明的列表项</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">标题文字</view>
+        <view class="weui-cell__ft">说明文字</view>
+      </view>
+    </view>
+    <view class="weui-cells__title">资料设置</view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">个人信息设置</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+</block>

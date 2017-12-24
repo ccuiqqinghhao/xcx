@@ -1,0 +1,8 @@
+<button wx:if="{{!isLogin}}" bindtap="toLogin">登陆</button>
+<block wx:else>
+  <button wx:if="{{!isGetData}}" bindtap='getUserData'>获取用户信息</button>
+  <block wx:else>
+    <image class='touxiang' src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+  </block>
+</block>

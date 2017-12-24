@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "page/news/news",
+    "page/my/my",
+    "page/index",
+    "page/market/market"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "backgroundColor": "#f8f8f8"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/news/news",
+        "iconPath": "image/news.png",
+        "selectedIconPath": "image/news2.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "page/market/market",
+        "iconPath": "image/shoppingCart.png",
+        "selectedIconPath": "image/shoppingCart2.png",
+        "text": "二手"
+      },
+      {
+        "pagePath": "page/my/my",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my2.png",
+        "text": "我"
+      }
+    ]
+  }
+}
