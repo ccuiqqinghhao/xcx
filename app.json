@@ -3,7 +3,8 @@
     "page/news/news",
     "page/my/my",
     "page/index",
-    "page/market/market"
+    "page/market/market",
+    "page/infosetting/infosetting"
   ],
   "window": {
     "navigationBarTextStyle": "black",
