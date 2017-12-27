@@ -1,16 +1,46 @@
 @import "../../style/weui.wxss";
 
 page{
-    background-color: #F8F8F8;
+    background-color: #FFFFFF;
     font-size: 16px;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
     height: 100%;
 }
 .context{
+  width: 95%;
+  margin-left:8px; 
+  margin-right: 8px;
+  min-height: 60px;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+.line-css {
+    height:1px;
+    background:#BBBBBB;
+}
+
+.bg{
   background-color: #FFFFFF;
   width: 100%;
   margin-left:auto; 
   margin-right: auto;
   min-height: 60px;
   margin-bottom: 10px;
+}
+.img{
+  width: 50px;
+  border-radius:50%; 
+  height: 50px;
+}
+.name{
+  font-size:14px;
+  position:absolute;
+  left:63px;
+  font-weight:bold;
+}
+.time{
+  font-size:12px;
+  position:relative;
+  top:-10px;
+  left:5px
 }

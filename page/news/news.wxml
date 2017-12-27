@@ -1,71 +1,23 @@
-<view class="context">
-  <image src="/image/head.PNG" style="width: 50px;border-radius:50%; height: 50px; " />
-  <text>李狗蛋</text>
+<view class="bg">
+  <!--一组内容开始-->
+  <view class="context">
+    <image src="/image/head.jpg" class="img" />
+    <text class="name">李狗蛋</text>
+    <text class="time">16:12</text>
+      <text>\n苹方字体 windows是专门为中国苹果手机用户研发制作的字体，此款字体能够应用于iOS 9 和Mac OS X El Capitan 操作系统上，字体安装方便简单，本站提供苹方字体 windows下载
+      </text>
+  </view>
+<view class="line-css"></view>
+<!--一组内容结束-->
 
-</view>
-<view class="context">
-  a
-</view>
-<view class="context">
-  asadasdasdasdsa
-</view>
-<view class="context">
-  <text>a\nb\nc\nd
-  </text>
-</view>
-<view class="context">
-  a
-</view>
-<view class="context">
-  asadasdasdasdsa
-</view>
-<view class="context">
-  <text>a\nb\nc\nd
-  </text>
-</view>
-<view class="context">
-  a
-</view>
-<view class="context">
-  asadasdasdasdsa
-</view>
-<view class="context">
-  <text>a\nb\nc\nd
-  </text>
-</view>
-<view class="context">
-  a
-</view>
-<view class="context">
-  asadasdasdasdsa
-</view>
-<view class="context">
-  <text>a\nb\nc\nd
-  </text>
-</view>
-<view class="context">
-  a
-</view>
-<view class="context">
-  asadasdasdasdsa
-</view>
-<view class="context">
-  <text>a\nb\nc\nd
-  </text>
-</view>
-<view class="context">
-  a
-</view>
-<view class="context">
-  asadasdasdasdsa
-</view>
-<view class="context">
-  <text>a\nb\nc\nd
-  </text>
-</view>
-<view class="context">
-  a
-</view>
-<view class="context">
-  asadasdasdasdsa
+  <view class="context">
+    <image src="/image/head.jpg" class="img" />
+    <text class="name">李狗蛋</text>
+    <text class="time">16:12</text>
+    <text>
+      　图书馆求约
+    </text>
+  </view>
+  <view class="line-css"></view>
+
 </view>
