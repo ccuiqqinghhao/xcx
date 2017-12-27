@@ -37,15 +37,8 @@ page{
   border-radius:50%; 
   height: 35px;
 }
-.UserName{
-  font-size:15px;
-  padding-left: 15px;
-  position: absolute;
-}
-.UserTime {
-  font-size: 12px;
-  padding-left:15px;
-}
+
+
 .img{
   width: 50px;
   border-radius:50%; 
@@ -62,5 +55,21 @@ page{
   position:relative;
   top:-10px;
   left:5px;
+}
 
+
+/*想做一个一张图片时宽度占满,大于一时一张占三分之一,最多显示九张那种*/
+.photo{/*这个是一张图片占满的*/
+  max-width:100%;
+  max-height: 250px;/*还需改进*/
+}
+.photos {/*这个是一行三张的*/
+  width:30%;
+  height:100px;
+  padding:1px;
+  table-layout: line;
+}
+.views {
+  font-size:10px;
+  
 }
