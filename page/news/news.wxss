@@ -8,6 +8,7 @@ page{
 }
 .context{
   width: 95%;
+
   margin-left:8px; 
   margin-right: 8px;
   min-height: 60px;
@@ -27,7 +28,7 @@ page{
   min-height: 50px;
   margin-bottom: 10px;
 }
-<<<<<<< HEAD
+
 
 
 .TouXiang {
@@ -44,7 +45,7 @@ page{
 .UserTime {
   font-size: 12px;
   padding-left:15px;
-=======
+}
 .img{
   width: 50px;
   border-radius:50%; 
@@ -60,6 +61,6 @@ page{
   font-size:12px;
   position:relative;
   top:-10px;
-  left:5px
->>>>>>> 30f6213eac6492e64fa62867543d37fe018c3929
+  left:5px;
+
 }

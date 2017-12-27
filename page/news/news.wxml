@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<view class="context">
-  <image class="TouXiang" src="/image/head.jpg" />
- <text class="UserName">李 狗蛋</text>
-  <text class="UserTime">12:30</text>
-</view>
 
-
-
-=======
 <view class="bg">
   <!--一组内容开始-->
   <view class="context">
@@ -31,4 +22,4 @@
   <view class="line-css"></view>
 
 </view>
->>>>>>> 30f6213eac6492e64fa62867543d37fe018c3929
+
