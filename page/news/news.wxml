@@ -20,4 +20,7 @@
   </view>
   <view class="line-css"></view>
 
+  
+<image src="/image/1.png" style='width: 30px;height:25px'/>
+<image src="/image/2.png" style='width: 30px;height:25px'/>
 </view>
