@@ -1,26 +1,53 @@
+
 <view class="bg">
   <!--一组内容开始-->
   <view class="context">
     <image src="/image/head.jpg" class="img" />
     <text class="name">李狗蛋</text>
-    <text class="time">16:12</text>
+    <text class="time">今天 16:12</text>
       <text>\n苹方字体 windows是专门为中国苹果手机用户研发制作的字体，此款字体能够应用于iOS 9 和Mac OS X El Capitan 操作系统上，字体安装方便简单，本站提供苹方字体 windows下载
       </text>
+      <text class="views">浏览520次</text>
   </view>
+  
 <view class="line-css"></view>
 <!--一组内容结束-->
 
+<!--一组内容开始-->
   <view class="context">
     <image src="/image/head.jpg" class="img" />
     <text class="name">李狗蛋</text>
-    <text class="time">16:12</text>
-    <text>
-      　图书馆求约
-    </text>
+    <text class="time">2017-5-20 16:12</text>
+    <text>\n</text><!--换行-->
+    <text>图书馆求约</text>
+    <!--换行-->
+    <image class="photo" src="/image/小黄人.jpg"></image>
+    <text class="views">浏览520次</text>
   </view>
   <view class="line-css"></view>
+<!--一组内容结束-->
 
-  
-<image src="/image/1.png" style='width: 30px;height:25px'/>
-<image src="/image/2.png" style='width: 30px;height:25px'/>
+<!--一组内容开始-->
+  <view class="context">
+    <image src="/image/head.jpg" class="img" />
+    <text class="name">李二狗</text>
+    <text class="time">2017-5-20 16:10</text>
+    <text>\n</text><!--换行-->
+    <text>刀 怒斩雪翼雕</text>
+    <text>\n</text><!--换行-->
+    <image class="photos" src="/image/images.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <image class="photos" src="/image/小黄人.jpg"></image>
+    <text>\n</text><!--换行-->
+    <text class="views">浏览520次</text>
+  </view>
+  <view class="line-css"></view>
+<!--一组内容结束-->
+
 </view>
