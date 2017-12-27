@@ -1,4 +1,65 @@
 <view class="context">
+  <image src="/image/head.PNG" style="width: 50px;border-radius:50%; height: 50px; " />
+  <text>李狗蛋</text>
+
+</view>
+<view class="context">
+  a
+</view>
+<view class="context">
+  asadasdasdasdsa
+</view>
+<view class="context">
+  <text>a\nb\nc\nd
+  </text>
+</view>
+<view class="context">
+  a
+</view>
+<view class="context">
+  asadasdasdasdsa
+</view>
+<view class="context">
+  <text>a\nb\nc\nd
+  </text>
+</view>
+<view class="context">
+  a
+</view>
+<view class="context">
+  asadasdasdasdsa
+</view>
+<view class="context">
+  <text>a\nb\nc\nd
+  </text>
+</view>
+<view class="context">
+  a
+</view>
+<view class="context">
+  asadasdasdasdsa
+</view>
+<view class="context">
+  <text>a\nb\nc\nd
+  </text>
+</view>
+<view class="context">
+  a
+</view>
+<view class="context">
+  asadasdasdasdsa
+</view>
+<view class="context">
+  <text>a\nb\nc\nd
+  </text>
+</view>
+<view class="context">
+  a
+</view>
+<view class="context">
+  asadasdasdasdsa
+</view>
+<view class="context">
   <text>a\nb\nc\nd
   </text>
 </view>
