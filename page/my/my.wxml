@@ -1,4 +1,4 @@
-<block wx:if="{{!isLogin}}">
+<block wx:if="{{!hasLogin}}">
   <view class='page'>
     <view class='page__hd'>
       <view class="page__title">您还没有登陆</view>
