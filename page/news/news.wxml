@@ -46,6 +46,7 @@
     <image class="photos" src="/image/小黄人.jpg"></image>
     <text>\n</text><!--换行-->
     <text class="views">浏览520次</text>
+
   </view>
   <view class="line-css"></view>
 <!--一组内容结束-->
