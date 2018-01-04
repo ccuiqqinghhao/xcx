@@ -1,3 +1,4 @@
+var app = getApp()
 Page({
 
   /**
@@ -5,14 +6,16 @@ Page({
    */
   data: {
     userInfo:{},
-    isLogin:false
+    hasLogin:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setData({
+      hasLogin: app.globalData.hasLogin
+    })
   },
 
   /**
@@ -70,10 +73,16 @@ Page({
     var that = this
     wx.login({
       success:res =>{
+        app.globalData.hasLogin = true
         that.setData({
-          isLogin:true
+          hasLogin:true
         });
-        this.userInfo();
+        that.update();//刷新视图
+        this.userInfo();//获取用户信息
+        //连接后台服务，开启持久化登陆
+        if (app.globalData.java_debug){
+          this.persisten();
+        }
       },
       fail:res=>{
         wx.showModal({
@@ -83,6 +92,13 @@ Page({
       }
     })
   },
+  /**
+   * 持久化登陆
+   */
+  persisten: function(){
+    //TODO：待做
+  },
+
   /**
    * 获取用户信息
    */
@@ -123,5 +139,6 @@ Page({
       }
     })  
   }
+  
 
 })

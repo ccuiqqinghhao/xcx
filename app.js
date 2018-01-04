@@ -1,4 +1,4 @@
-﻿App({
+App({
 
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
@@ -25,5 +25,13 @@
    */
   onError: function (msg) {
     
+  },
+  /**
+   * 全局数据
+   */
+  globalData:{
+    hasLogin:false,//是否登陆
+    openid:null,//openid
+    java_debug:true//是否连接后台
   }
 })
