@@ -1,3 +1,5 @@
+const loginUrl = require('../../config').loginUrl
+const sendUserInfoUrl = require('../../config').sendUserInfoUrl
 var app = getApp()
 Page({
 
@@ -5,8 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:{},
-    hasLogin:false
+    userInfo: {},
+    hasLogin: false,
+    code: null
   },
 
   /**
@@ -22,69 +25,70 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   },
   /**
    * 登陆
    */
-  startLogin:function(){
+  startLogin: function () {
     var that = this
     wx.login({
-      success:res =>{
+      success: res => {
         app.globalData.hasLogin = true
         that.setData({
-          hasLogin:true
+          hasLogin: true,
+          code: res.code
         });
-        that.update();//刷新视图
-        this.userInfo();//获取用户信息
-        //连接后台服务，开启持久化登陆
-        if (app.globalData.java_debug){
-          this.persisten();
-        }
+        //连接后台服务，开启持久化登陆 
+        this.persisten();
+        //获取用户信息
+        this.userInfo();
+
+
       },
-      fail:res=>{
+      fail: res => {
         wx.showModal({
           title: '登陆失败',
           content: '发生未知错误'
@@ -95,50 +99,51 @@ Page({
   /**
    * 持久化登陆
    */
-  persisten: function(){
-    //TODO：待做
+  persisten: function () {
+    wx.request({
+      url: loginUrl,
+      method: 'POST',
+      data: this.data.code
+    })
   },
+
 
   /**
    * 获取用户信息
    */
-  userInfo:function(){
+  userInfo: function () {
     var that = this
-    wx.getSetting({
-      success:res=>{
-        /**如果已经授权 */
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success:res=>{
-              that.setData({
-                userInfo: res.userInfo
-              })
-            }
+    if (app.globalData.userInfoAuth) {
+      wx.getUserInfo({
+        success: res => {
+          that.setData({
+            userInfo: res.userInfo
           })
-        }else{
-          //如果没有授权
-          wx.authorize({
-            scope: 'scope.userInfo',
-            success:res=>{
-              wx.getUserInfo({
-                success: res => {
-                  that.setData({
-                    userInfo: res.userInfo
-                  })
-                }
-              })
-            },
-            fail:res=>{
-              wx.showModal({
-                title: '没有得到权限',
-                content: '没有权限将不能你使用此功能',
-              })
-            }
-          })
+          //发送用户信息给后端进行处理
+          this.sendUserInfo();
+          console.log("发出")
         }
-      }
-    })  
-  }
-  
+      })
+    } else {
+      console.log("没权限")
+      wx.showModal({
+        title: '是否获取权限',
+        content: '您没有给予相应的权限，可能会出现异常'
+      })
+    }
 
+
+  },
+  /**
+   * 发送用户信息至后台进行数据更新
+   */
+  sendUserInfo: function () {
+    wx.request({
+      url: sendUserInfoUrl,
+      method: 'POST',
+      data: {
+        userInfo: this.data.userInfo
+      }
+    })
+  }
 })
