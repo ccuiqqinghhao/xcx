@@ -27,7 +27,7 @@
         "pagePath": "page/market/market",
         "iconPath": "image/shoppingCart.png",
         "selectedIconPath": "image/shoppingCart2.png",
-        "text": "二手"
+        "text": "交换"
       },
       {
         "pagePath": "page/my/my",

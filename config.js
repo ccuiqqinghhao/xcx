@@ -2,7 +2,7 @@
  * 配置文件
  */
 
-var host = 'wx.abble.cn'
+var host = '127.0.0.1:8080'
 
 var config = {
   host,
