@@ -1,6 +1,7 @@
-const loginUrl = require('../../config').loginUrl
-const sendUserInfoUrl = require('../../config').sendUserInfoUrl
+
+
 var util = require('../../util/util')
+var util2 = require('../../util/util2')
 var app = getApp()
 Page({
 
@@ -10,73 +11,44 @@ Page({
   data: {
     userInfo: {},
     hasLogin: false,
-    code: null
-  },
-  onLoad: function (option) {
-    util.hasKey('openid')
-      .then(res => {
-        console.log("openid 是"+res)
-        if (res) {
-          this.setData({
-            hasLogin: true
-          })
-          app.globalData.hasLogin = true
-          return util.wxAuthorize('scope.userInfo')
-        } else {
-          throw 0
-        }
-      })
-      .then(res => {
-        if(res) return util.wxGetUserInfo()
-        else{
-          throw 0
-        }
-      })
-      .then(res => {
-        this.setData({
-          userInfo: res.userInfo
-        })
-        console.log(res.userInfo)
-      })
-      .catch(res => {
-        console.log("errrrr")
-        console.log(res)
-      })
+    code: null,
   },
 
   /**
    * 自定义登陆函数
    */
   startLogin: function () {
-    util.wxLogin()
-      .then(code => {
-        console.log('code:' + code)
-        return util.wxRequest(loginUrl, code, 'POST')
-      })
-      .then(map => {
-        console.log('openid: ' + map.data.msg)
-        return util.wxSetStorage('openid', map.data.msg)
-      })
-      .then(()=>{
-        this.setData({
-          hasLogin: true
+    var that = this
+   
+    //登陆
+    util2.login(that);
+    
+    setTimeout(function () {
+      if(!that.data.hasLogin){
+        wx.showModal({
+          title: '登陆超时',
+          content: '请重新登陆',
+          success:e=>{
+            that.setData({
+              hasLogin:false
+            })
+          },
+          fail:e=>{
+            that.setData({
+              hasLogin: false
+            })
+          }
         })
-        app.globalData.hasLogin = true
-        return util.wxAuthorize('scope.userInfo')
-      })
-      .then(res => {
-        if(res){
-          return util.wxGetUserInfo()
-        }else{
-          throw 0
-        }
-      })
-      .then(res => {
-        this.setData({
-          userInfo: res.userInfo
-        })
-        console.log(res.userInfo)
-      })
-      .catch(res => console.log(res))
-  }
+      }else{
+        util2.sendUserInfo(that,wx.getStorageSync('openid'))
+      }
+      
+    }, 10000) //延迟时间 这里是10秒  
+    
+  },
+
+  /**
+   * 重新获取权限
+   */
+  getAuth:()=>wx.openSetting({})
 })

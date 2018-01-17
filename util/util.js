@@ -174,6 +174,32 @@ function wxGetUserInfo(){
     })
   })
 }
+
+/**
+ * 重新获取用户授权
+ */
+function wxOpenSetting(){
+  return new Promise((r,re) => {
+    wx.openSetting({
+      success:res => r(res)
+    })
+  })
+}
+
+/**
+ * 跳转页面
+ */
+function wxRedirectTo(url){
+  return new Promise((r,re) =>{
+    wx.redirectTo({
+      url: url,
+      success:r(true),
+      fail:r(false)
+    })
+  })
+}
+
+
 module.exports = {
   wxLogin: wxLogin,
   wxSetStorage: wxSetStorage,
@@ -184,5 +210,7 @@ module.exports = {
   wxGetSetting: wxGetSetting,
   wxShowModal: wxShowModal,
   wxRequest: wxRequest,
-  wxGetUserInfo: wxGetUserInfo
+  wxGetUserInfo: wxGetUserInfo,
+  wxOpenSetting: wxOpenSetting,
+  wxRedirectTo: wxRedirectTo
 }

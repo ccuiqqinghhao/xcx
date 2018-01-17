@@ -1,0 +1,9 @@
+<block>
+  <view class='page'>
+    <view class='page__hd'>
+      <view class="page__title">没有权限！</view>
+      <view class="page__desc">我们无法获取到您的用户权限！</view>
+      <button class="weui-btn" type="primary" bindtap='getAuth'>重新授权</button>
+    </view>
+  </view>
+</block>
