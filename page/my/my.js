@@ -14,41 +14,62 @@ Page({
     code: null,
   },
 
+  onLoad:function(){
+    var that = this
+    wx.checkSession({
+      success:e=>{
+        console.log("checkSession=true")
+        that.setData({
+          hasLogin:true
+        })
+        wx.getUserInfo({
+          success: e => {
+            that.setData({
+              userInfo: e.userInfo
+            })
+          }
+        })
+
+        setTimeout(function(){
+          util2.sendUserInfo(that, wx.getStorageSync('openid'))
+        },10000);
+      }
+    })
+  },
+
   /**
    * 自定义登陆函数
    */
   startLogin: function () {
     var that = this
-   
     //登陆
     util2.login(that);
-    
+
     setTimeout(function () {
-      if(!that.data.hasLogin){
+      if (!that.data.hasLogin) {
         wx.showModal({
           title: '登陆超时',
           content: '请重新登陆',
-          success:e=>{
+          success: e => {
             that.setData({
-              hasLogin:false
+              hasLogin: false
             })
           },
-          fail:e=>{
+          fail: e => {
             that.setData({
               hasLogin: false
             })
           }
         })
-      }else{
-        util2.sendUserInfo(that,wx.getStorageSync('openid'))
+        
+      } else {
+        util2.sendUserInfo(that, wx.getStorageSync('openid'))
       }
-      
     }, 10000) //延迟时间 这里是10秒  
-    
-  },
+},
 
   /**
    * 重新获取权限
    */
-  getAuth:()=>wx.openSetting({})
+  getAuth:() => wx.openSetting({})
 })
