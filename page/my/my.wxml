@@ -1,13 +1,16 @@
-<block wx:if="{{!isLogin}}">
+<!-- <block wx:if="{{!hasLogin}}">
   <view class='page'>
     <view class='page__hd'>
       <view class="page__title">您还没有登陆</view>
       <view class="page__desc">您必须登陆后才可以继续使用。您可以在这里发布任何好消息，完成物品交易。</view>
       <button class="weui-btn" type="primary" bindtap='startLogin'>登陆</button>
+      <block wx:if="{{show_auth}}">
+        <view class="page__desc" bindtap='getAuth'>点击重新获取权限</view>
+      </block>
     </view>
   </view>
-</block>
-<block wx:else>
+</block> -->
+<block>
   <view class='page'>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
