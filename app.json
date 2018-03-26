@@ -1,10 +1,13 @@
 {
   "pages": [
+    "page/start/start",
     "page/news/news",
     "page/my/my",
     "page/index",
     "page/market/market",
-    "page/infosetting/infosetting"
+    "page/infosetting/infosetting",
+    "page/error/error"
+    
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -27,7 +30,7 @@
         "pagePath": "page/market/market",
         "iconPath": "image/shoppingCart.png",
         "selectedIconPath": "image/shoppingCart2.png",
-        "text": "二手"
+        "text": "交换"
       },
       {
         "pagePath": "page/my/my",

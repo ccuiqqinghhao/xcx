@@ -72,15 +72,5 @@ page{
 }
 .views {
   font-size:10px;
-}
 
-/*未点赞*/
-.notLiked {
-  background:url(http://www.moepan.net/uploads/2017122720311794414602.png) no-repeat;
-  align:right;
-
-}
-/*已点赞*/
-.liked {
-  background:url(http://www.moepan.net/uploads/2017122720361228890302.png) no-repeat;
 }
