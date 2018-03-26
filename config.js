@@ -11,6 +11,8 @@ var config = {
   //上传用户信息地址
   sendUserInfoUrl: `http://${host}/sendUserInfo`,
   //验证token是否有效
-  tokenValidUrl: `http://${host}/wx/tokenValid`
+  tokenValidUrl: `http://${host}/wx/tokenValid`,
+  //更新用户信息
+  updateUserInfo: `http://${host}/wx/updateUserInfo`
 };
 module.exports = config
