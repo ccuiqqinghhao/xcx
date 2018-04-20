@@ -1,1 +1,45 @@
-<!--page/infosetting/infosetting.wxml-->
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">系别</view>
+    <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChangeDept" value="{{indexdept}}" range="{{dept}}">
+              <view class="weui-input">{{dept[indexdept]}}</view>
+            </picker>
+          </view>
+        </view>
+
+    </view>
+  </view>
+
+  <view class="page-section">
+    <view class="weui-cells__title">年级</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+            <picker bindchange='bindPickerChangeGrade' value="{{indexgrade}}" range="{{grade}}">
+              <view class="weui-input">{{grade[indexgrade]}}</view>
+            </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-section">
+    <view class="weui-cells__title">性别</view>
+    
+      <radio-group bindchange="bindPickerChangeSex">
+        <label class="radio">
+          <radio value="男" checked="true"/>男
+        </label>
+        <label class="radio">
+          <radio value="女" checked="true"/>女
+        </label>
+      </radio-group>
+   
+  </view>
+
+
+   
+</view>

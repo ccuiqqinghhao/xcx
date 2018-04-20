@@ -13,6 +13,8 @@ var config = {
   //验证token是否有效
   tokenValidUrl: `http://${host}/wx/tokenValid`,
   //更新用户信息
-  updateUserInfo: `http://${host}/wx/updateUserInfo`
+  updateUserInfo: `http://${host}/wx/updateUserInfo`,
+  //获取商品分类
+  getCategorieUrl: `http://${host}/wx/getCategorie`
 };
 module.exports = config

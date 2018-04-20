@@ -1,0 +1,84 @@
+<scroll-view class="sv">
+  <view class="kuai">
+    <view style='margin-top:25rpx;margin-left:100rpx;'>正在交易</view>
+  </view>
+  <view class="kuai">
+    <view style='margin-top:25rpx;margin-left:100rpx;'>已完成交易</view>
+  </view>
+</scroll-view>
+<view>
+  <view class="item">
+    <view>
+      <text style='margin-left:20rpx;'>卖家昵称</text>
+      <text style='float:right;margin-right:20rpx;color:#f1a83b'>交易状态</text>
+    </view>
+    <view class="item-content">
+      <image src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+      <text class="item-title">商品名称</text>
+      <text class="item-price" style='float:right'>￥123.12</text>
+      <text class="item-time">×1</text>
+    </view>
+    <view>
+      <scroll-view>
+        <text class="item-cost">合计:$10元</text>
+      </scroll-view>
+    </view>
+    <view class="item-line">
+    </view>
+    <view style="height:65rpx;">
+      <view class="item-button">
+        <view style='color:#fff;margin-left:20rpx;margin-top:10rpx;'>确认完成</view>
+      </view>
+    </view>
+  </view>
+ 
+ <view class="item">
+    <view>
+      <text style='margin-left:20rpx;'>卖家昵称</text>
+      <text style='float:right;margin-right:20rpx;color:#f1a83b'>交易状态</text>
+    </view>
+    <view class="item-content">
+      <image src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+      <text class="item-title">商品名称</text>
+      <text class="item-price" style='float:right'>￥123.12</text>
+      <text class="item-time">×1</text>
+    </view>
+    <view>
+      <scroll-view>
+        <text class="item-cost">合计:$10元</text>
+      </scroll-view>
+    </view>
+    <view class="item-line">
+    </view>
+    <view style="height:65rpx;">
+      <view class="item-button">
+        <view style='color:#fff;margin-left:20rpx;margin-top:10rpx;'>确认完成</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="item">
+    <view>
+      <text style='margin-left:20rpx;'>卖家昵称</text>
+      <text style='float:right;margin-right:20rpx;color:#f1a83b'>交易状态</text>
+    </view>
+    <view class="item-content">
+      <image src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+      <text class="item-title">商品名称</text>
+      <text class="item-price" style='float:right'>￥123.12</text>
+      <text class="item-time">×1</text>
+    </view>
+    <view>
+      <scroll-view>
+        <text class="item-cost">合计:$10元</text>
+      </scroll-view>
+    </view>
+    <view class="item-line">
+    </view>
+    <view style="height:65rpx;">
+      <view class="item-button">
+        <view style='color:#fff;margin-left:20rpx;margin-top:10rpx;'>确认完成</view>
+      </view>
+    </view>
+  </view>
+</view>

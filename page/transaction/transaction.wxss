@@ -1,0 +1,72 @@
+page{
+  background-color: #CCCCCC;
+}
+.kuai{
+  width: 50%;
+  height:100rpx;
+  background-color: #f1a83b;
+  color:#fff;
+  display:inline-block;
+
+}
+.zuo{
+  float: left;
+}
+.piao{
+  position: absolute;
+  left:51%;
+}
+.sv{
+  margin-bottom: 3rpx;
+}
+.item{
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 500rpx;
+  background-color: #fff;
+}
+
+.item-content{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 250rpx;
+  background-color: #fAfAfA
+}
+.item-content image{
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+  top:20rpx;
+  left:30rpx;
+}
+.item-title{
+  position: relative;
+  top:-150rpx;
+  left:50rpx;
+}
+.item-price{
+  position: relative;
+  top:10rpx;
+  left:-10rpx;
+}
+.item-time{
+  position: relative;
+  left: 320rpx;
+}
+.item-line{
+background-color: #fAfAfA;
+width: 100%;
+height: 10rpx;
+}
+.item-cost{
+  float: right;
+  margin-right: 20rpx;
+}
+.item-button{
+    background-color: #f1a83b;
+    width: 200rpx;
+    height: 80rpx;
+    float:right;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+}

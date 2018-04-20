@@ -1,12 +1,15 @@
 // page/market/market.js
 var app = getApp();
+const getCategorieUrl = require('../../config').getCategorieUrl
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    categories: [],
+    scrollTop: "0",
+    curCid:0    //当前分类id
   },
 
   /**
@@ -14,6 +17,22 @@ Page({
    */
   onLoad: function (options) {
     app.login();
+    var that = this;
+    //获取分类
+    wx.request({
+      url: getCategorieUrl,
+      success:res=>{
+        var cat = [{ id: 0, name: "全部" }];
+        for(var i=0;i<res.data.length;i++){
+          cat.push(res.data[i]);
+        }
+        that.setData({
+          categories: cat
+        });
+        console.log(res.data);
+        console.log(res.data.length)
+      }
+    })
   },
 
   /**
@@ -28,6 +47,12 @@ Page({
    */
   onShow: function () {
   
+  },
+  scroll: function (e) {
+    var that = this, scrollTop = that.data.scrollTop;
+    that.setData({
+      scrollTop: e.detail.scrollTop
+    })
   },
 
   /**

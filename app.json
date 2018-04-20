@@ -1,13 +1,15 @@
 {
   "pages": [
+    "page/transaction/transaction",
     "page/start/start",
     "page/news/news",
     "page/my/my",
     "page/index",
     "page/market/market",
     "page/infosetting/infosetting",
-    "page/error/error"
-    
+    "page/error/error",
+    "page/goods-details/details"
+   
   ],
   "window": {
     "navigationBarTextStyle": "black",

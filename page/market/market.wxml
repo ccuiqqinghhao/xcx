@@ -1,2 +1,103 @@
 <!--page/market/market.wxml-->
-<text>page/market/market.wxml</text>
+<view class='content'>
+  <view class="serarch-content">
+      <image src="/image/search-pic.png" class="search-icon" />
+      <input placeholder="请输入搜索内容" 
+              class="search-input" 
+              maxlength="30" 
+              confirm-type="搜索" 
+              bindinput='listenerSearchInput' 
+              bindconfirm='toSearch'>
+      </input>
+      <button class='search-btn' bindtap="toSearch">搜索
+      </button>
+    </view>
+
+    <!--分类-->
+    <view class="type-container">
+        <scroll-view class="type-navbar" scroll-x="true">
+            <view class="type-box" wx:for-items="{{categories}}" wx:key="id">
+                <view id="{{item.id}}" 
+                      class="type-navbar-item {{activeCategoryId == item.id ? 'type-item-on' : ''}}" 
+                      bindtap="tabClick">
+                    {{item.name}}
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+
+<!-- <navigator url="../goods-details/details" class="weui-cell weui-cell_access">
+        tiaozhianf
+      </navigator> -->
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+ <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text>
+</view>
+
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359403183"></image>
+ <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text> 
+</view>
+
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+  <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text> 
+</view>
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+ <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text>
+</view>
+
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359403183"></image>
+ <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text> 
+</view>
+
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+  <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text> 
+</view>
+
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+ <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text>
+</view>
+
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359403183"></image>
+ <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text> 
+</view>
+
+<view class="shangpin">
+  <image style='width:250rpx;height:250rpx' src="http://7xogqh.com1.z0.glb.clouddn.com/1523359270727"></image>
+  <text class="name">测试商品名</text>
+  <text class="price">$8888.88</text>
+  <text class="xi">信息工程系</text> 
+</view>
+
+
+
+<view>
+  <navigator url="../transaction/transaction" class="weui-cell weui-cell_access">
+        tiaozhianf
+      </navigator>
+</view>
+
+
